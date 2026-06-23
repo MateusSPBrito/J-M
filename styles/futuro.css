@@ -1,0 +1,21 @@
+#futuro {
+    padding: 3rem 0;
+    width: 100vw;
+    background-color: var(--fundo-secoes);
+    margin-top: 2rem;
+}
+
+.alert {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    font-size: 1.5rem;
+    color: var(--fundo);
+    text-align: center;
+    margin: 3rem 0;
+    background-color: var(--suporte);
+    width: 105vw;
+    transform: rotate(-5deg);
+    position: relative;
+    right: 2.5vw;
+}

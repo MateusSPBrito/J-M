@@ -1,0 +1,62 @@
+#votos {
+    padding: 3rem 30px 0;
+    width: 100vw;
+}
+
+#votos .btns-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+#votos .btns-container button {
+    width: auto !important;
+}
+
+.caderno {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 20px 40px 50px;
+    /* Margem maior na esquerda para a linha vermelha */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    /* Criando as linhas azuis do caderno */
+    background-image: linear-gradient(#e1e6f0 1px, transparent 1px);
+    background-size: 100% 30px;
+    /* 30px é a altura de cada linha */
+    background-position: 0 10px;
+    flex-direction: column;
+
+    /* se estiver com a classe show fica display flex */
+    display: none;
+}
+
+/* Criando a linha vertical vermelha da margem */
+.caderno::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    /* Posição da linha vermelha */
+    width: 1px;
+    height: 100%;
+    background-color: #ffaa99;
+}
+
+.texto-caderno {
+    font-family: var(--fonte-cursiva);
+    font-size: 24px;
+    color: var(--primaria);
+    line-height: 30px;
+    /* OBRIGATÓRIO: Mesmo valor do background-size para alinhar nas linhas */
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+.caderno img {
+    width: 50px;
+    align-self: center;
+}

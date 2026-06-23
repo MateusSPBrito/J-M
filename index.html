@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+
+    <link rel="stylesheet" href="styles/geral.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/timeline.css">
+    <link rel="stylesheet" href="styles/votos.css">
+    <link rel="stylesheet" href="styles/futuro.css">
+
+    <script src="scripts/app.js" defer></script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/timeline.js" defer></script>
+    <script src="scripts/votos.js" defer></script>
+
+    <title>Jade&Mateus</title>
+</head>
+
+<body>
+
+    <audio src="audio/fundo.mp3" loop></audio>
+
+    <header class="transparent">
+        <a href="#" id="header-title">Jade & Mateus</a>
+
+        <a id="btn-menu" onclick="openOrCloseMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </a>
+
+        <nav id="nav">
+            <a href="#hero" class="active">Home</a>
+            <a href="#timeline">Retrospectiva</a>
+            <a href="#votos">Votos</a>
+            <a href="#futuro">Futuro</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div id="hero-text-container">
+            <p id="hero-title">O tempo passa, mas o amor se reafirma.</p>
+            <div>
+                <p class="versiculo">Acima de tudo, porém, revistam-se do amor, que é o elo perfeito.</p>
+                <p class="referencia">Colossenses 3:14</p>
+            </div>
+        </div>
+
+        <div class="foto">
+            <img src="imgs/J&M-hero.png" alt="Foto1">
+            <div class="mensagem">
+                <img src="imgs/infinito.png" alt="infinito">
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <p class="title">Nossa Retrospectiva</p>
+        <p class="text">
+            Parece que foi ontem que a nossa história começou, mas já vivemos
+            <span id="anos-juntos">7</span> anos juntos. Cada risada, cada abraço
+            e cada capítulo que escrevemos merece ser relembrado. Preparada para viajar um pouco no tempo?
+        </p>
+
+        <button class="btn1" onclick="abrirTimeline()">Ver retrospectiva</button>
+
+        <div id="timeline-container">
+
+            <div id="page1" class="timeline-page">
+                <p class="title">Hora de olhar para trás!</p>
+                <p class="text">Já vivemos muitas coisas juntos,<br>vamos relembrar algumas delas.</p>
+
+                <div class="foto">
+                    <img src="imgs/timeline-1.jpg" alt="Foto1">
+                    <div class="mensagem">
+                        <p>Nossa historia</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page2" class="timeline-page">
+                <p class="title">Nossa primeira conversa</p>
+                <p class="text">Nada muito especial.<br><br>30/03/2019</p>
+                <img src="imgs/messages.svg" alt="messages">
+            </div>
+
+            <div id="page3" class="timeline-page">
+                <p class="title">A declaração</p>
+                <p class="text">Ele disse o que sentia.<br>
+                    A resposta foi incerta e pouco esperançosa, mas não demorou e ela não
+                    resistiu.<br><br>23/04/2019</p>
+                <img src="imgs/declaração timeline.svg" alt="messages">
+            </div>
+
+            <div id="page4" class="timeline-page">
+                <p class="title">O primeiro<br>"Eu te amo"</p>
+                <p class="text">O sentimento crescia e não dava mais pra ficar calado.
+                    <br><br>13/05/2019
+                </p>
+            </div>
+
+            <div id="page5" class="timeline-page">
+                <p class="title">O Início</p>
+                <p class="text">Ela disse "sim", mas o mais difícil ainda estava por vim.
+                    <br><br>19/06/2019
+                </p>
+                <div class="foto">
+                    <img src="imgs/timeline-foto-page-4.png" alt="inicio">
+                    <div class="mensagem">
+                        <p>Onde tudo começou</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page6" class="timeline-page">
+                <p class="title">Carossel</p>
+                <p class="text">Entendedores entenderão.
+                    <br><br>19/12/2020
+                </p>
+                <div class="foto">
+                    <img src="imgs/carrossel.png" alt="carrossel">
+                    <div class="mensagem">
+                        <p>?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page7" class="timeline-page">
+                <p class="title">O segudo<br>"sim"</p>
+                <p class="text">O dia em que foi dado um grande passo: o noivado.<br>
+                    Não tinha mais volta.
+                    <br><br>12/12/2023
+                </p>
+                <div class="foto">
+                    <img src="imgs/noivado.png" alt="noivado">
+                    <div class="mensagem">
+                        <p>Noivos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page8" class="timeline-page">
+                <p class="title">Nossa casa</p>
+                <p class="text">Lar doce lar!<br>Oportunidade na hora certa.
+                    <br><br>01/02/2024
+                </p>
+                <div class="foto">
+                    <img src="imgs/casa.png" alt="casa">
+                    <div class="mensagem">
+                        <p>Mansão</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page9" class="timeline-page">
+                <p class="title">O "sim" definitivo</p>
+                <p class="text">O dia mais importante!<br>
+                    Bastante cansativo, mas único e especial.
+                    <br><br>22/09/2024
+                </p>
+                <div class="foto">
+                    <img src="imgs/casados.png" alt="casados">
+                    <div class="mensagem">
+                        <p>Casados</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page10" class="timeline-page">
+                <p class="title">Primeira viajem</p>
+                <p class="text">
+                    A primeira viajem juntos a gente nunca esquece.<br>
+                    Tinha até parque, só que sem montanha russa.
+                    <br><br>23/09/2024
+                </p>
+                <div class="foto">
+                    <img src="imgs/costa.png" alt="costa">
+                    <div class="mensagem">
+                        <p>Primeira de muitas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page11" class="timeline-page">
+                <p class="title">Primeira guerra</p>
+                <p class="text">Gata promíscua.<br>
+                    Tem os filhos e vem cuidar no nosso telhado.<br>
+                    Pulgas malditas.
+                    <br><br>10/2024
+                </p>
+                <div class="foto">
+                    <img src="imgs/gatos.png" alt="gatos">
+                    <div class="mensagem">
+                        <p>Primeira de três</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page12" class="timeline-page">
+                <p class="title">O melhor destino</p>
+                <p class="text">Tão esperada e aguardada.<br>
+                    Itacare, voltaremos em breve.
+                    <br><br>18/05/2026
+                </p>
+                <div class="foto">
+                    <img src="imgs/itacare.png" alt="itacare">
+                    <div class="mensagem">
+                        <p>Viajem perfeita</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page13" class="timeline-page">
+                <p class="title">Nosso pet<br>Gustave</p>
+                <p class="text">Chegou e logo se acomodou.<br>
+                    Triste porque pouco ficou.
+                    <br><br>06/2026
+                </p>
+                <div class="foto">
+                    <img src="imgs/gustave.png" alt="gustave">
+                    <div class="mensagem">
+                        <p>Em memoria</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page14" class="timeline-page">
+                <p class="title">Por enquanto é isso</p>
+                <p class="text">Muitas aventuras ainda estão por vim.</p>
+            </div>
+
+            <button class="btn-timeline" id="timeline-avancar" onclick="avancaTimeline()">
+                <span>&#10095;</span>
+            </button>
+
+            <button class="btn-timeline" id="timeline-recuar" onclick="recuaTimeline()">
+                <span>&#10094;</span>
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="votos">
+        <p class="title">Os Votos</p>
+        <p class="text">
+            Aqui está escrito nosso compromisso e promessa, a qual temos como desejo cumpri a cada dia!
+        </p>
+        <div class="btns-container">
+            <button id="btn-dele" class="btn1 btn2" onclick="mudaVotos(true)">Dele</button>
+            <button id="btn-dela" class="btn2" onclick=" mudaVotos(false)">Dela</button>
+        </div>
+
+        <div id="votos-dele" class="caderno show">
+            <p class="texto-caderno">
+                Querida, quando olho para o passado, percebo o quanto Deus tem nos abençoado e como seus planos são
+                perfeitos.<br><br>
+                Lembro de quando nos conhecemos, até o dia em que decidi falar o que sentia por você e, mesmo com a sua
+                primeira reação não muito clara ou motivadora, a partir daquele momento ficamos mais próximos.<br><br>
+                Não demorou muito para começarmos o nosso namoro, sei que você se lembra bem disso, não é?
+                A partir daí cada experiência trazia um aprendizado sobre o outro.<br><br>
+                Foram vários os momentos, felizes e
+                alguns desafiadores, mas que sempre fortaleciam a nossa união e firmavam nosso amor.<br><br>
+                À medida que eu ia te conhecendo, me apaixonava mais. Sua força, determinação, preocupação e esforço
+                para fazer tudo certo, junto com seu sorriso, humor e brincadeiras, trouxeram leveza para os meus dias.
+                São diversos os detalhes que te tornam tão especial para mim.<br><br>
+                Hoje, olhando para você, não vejo apenas o presente nesse momento tão importante, mas vejo também o
+                nosso futuro e nosso lar. Estou ansioso para dividir com você cada dia das nossas vidas e juntos viver
+                aventuras, vencer desafios e realizar sonhos.<br><br>
+                Agora, diante de todos aqui presentes, prometo seguir o que Deus nos ensina sobre amor em 1 Coríntios
+                13:4-7. Que o nosso amor seja paciente, bondoso e que tudo suporte com fé, esperança e alegria.<br><br>
+                Agradeço a Deus por nos unir e guiar até aqui, e peço a Ele sabedoria para vivermos a nova fase de
+                nossas vidas.<br><br>
+                Amor, estou muito feliz com a nossa união e animado para fortalecê-la ainda mais.<br><br>
+            </p>
+            <p class="texto-caderno" style="text-align: center;">Te amo infinito.<br><br></p>
+
+            <img src="imgs/infinito.png" alt="infinito">
+        </div>
+
+        <div id="votos-dela" class="caderno">
+            <p class="texto-caderno">
+                A maioria das pessoas que me conhecem sabem que eu não gosto dessas demonstrações de carinho, mas,
+                apesar disso, eu escolhi te dizer o quanto estou feliz em dividir o altar contigo.<br><br>
+                Eu poderia falar do neto que passava as noites acordado cuidando da avó doente, poderia falar do filho
+                maravilhoso que você é ou do genro que minha mãe ama, aquele que come algumas gororobas que aparece na
+                cozinha lá de casa. Todos esses são qualidades admiráveis, principalmente a última.<br><br>
+                Porém, no dia de hoje, após cinco anos dividindo os dias contigo, escolhi falar do homem que antes de
+                começarmos a namorar assistiu todos os filmes do Rei Leão porque eu falei que gostava, que se
+                preocupa e reclama quando eu não tomo café da manhã (o que acontece na maioria dos meus dias), que
+                acorda as 4h da manhã para que possamos viver o dia de hoje e todos os outros que virão, que transforma
+                os meus sonhos em seu (essa festa é a prova disso), que é paciente, carinhoso e que tem sempre um “a
+                gente dá um jeito” disponível para me dizer quando eu começo a ficar nervosa e nesses dez meses de
+                noivado foram ditos muitos<br><br>
+                Enfim, você é muito mais do que eu pediria a Deus, até porque, quando era mais nova e minha mãe disse
+                que eu tinha que orar pelo meu futuro marido, eu só pedi cabelo liso (até porque eu achava que não daria
+                conta de mim e uma criança cacheada) aí o resto eu deixo para Deus e nem se eu tivesse feito uma lista
+                teria pensado em alguém tão especial quanto você.<br><br>
+                Apesar de sermos extremamente diferentes, você é paciente, eu sou estressada, você é do tipo tranquilo e
+                eu mais agitada, você pensa muito antes de fazer algo e eu quero que faça logo. Apesar disso tudo, não
+                imagino viver a vida com mais ninguém.<br><br>
+                Eu escolhi te amar todos os dias durante os cinco anos que passaram e prometo te amar em todos os outros
+                que virão. Prometo ser seu lar, prometo não reclamar quando você ficar repetindo a mesma música no
+                violão até conseguir acertar, e o mais importante, prometo sempre pedir para fazer cosquinha em você,
+                mesmo que não importe a resposta que você vai dar.<br><br>
+                Enfim, estou ansiosa por essa nova fase etapa que vamos viver e tenho certeza que Deus tem preparado o
+                melhor para nós.<br><br>
+                Te amo infinito e para sempre.
+            </p>
+        </div>
+    </section>
+
+    <section id="futuro">
+        <p class="title">O Futuro</p>
+        <p class="alert">EM BREVE</p>
+        <p class="text">
+            Ops! Essa página ainda não está disponivel.<br>
+            Coisas incríveis e emocionantes estão sendo vividas e logo estarão aqui.
+        </p>
+    </section>
+
+    <p class="copyright">&copy; 2026 J&amp;M. Todos os direitos reservados.</p>
+
+</body>
+
+</html>

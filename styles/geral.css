@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poor+Story');
+
+:root {
+    --primaria: #661D55;
+    --fundo: #FFF7F9;
+    --fundo-secoes: #F0D6E6;
+    --suporte: #A84474;
+    --texto: #3D1133;
+
+    --fonte-principal: "Montserrat", sans-serif;
+    --fonte-cursiva: "Oooh Baby", cursive;
+    --fonte-fotos: 'Poor Story', cursive;
+
+    --largura-maxima: 1200px;
+    --horizontal-padding: calc((100vw - var(--largura-maxima)) / 2);
+    --header-size: 50px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal), Helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+body,
+html {
+    background-color: var(--fundo);
+    overflow-x: hidden;
+
+    /* Bloqueio seleção de texto */
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */
+    user-select: none;
+    /* Padrão (Chrome, Edge, Opera) */
+}
+
+no-scroll {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--primaria);
+    text-align: center;
+}
+
+.text {
+    color: var(--suporte);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.btn1,
+.btn2 {
+    align-self: center;
+    border: none;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: .2rem;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn1 {
+    background-color: var(--primaria) !important;
+    color: var(--fundo) !important;
+}
+
+.btn2 {
+    background-color: var(--fundo);
+    color: var(--primaria);
+}
+
+.foto {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.foto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.mensagem {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 2em;
+}
+
+.copyright {
+    width: 100vw;
+    background-color: var(--primaria);
+    color: var(--fundo);
+    padding: 10px 30px;
+    font-size: .9rem;
+}
+
+.show {
+    display: flex !important;
+}

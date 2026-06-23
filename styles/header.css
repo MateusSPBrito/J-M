@@ -1,0 +1,130 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--header-size);
+    background-color: var(--fundo);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--horizontal-padding);
+    transition: 1s ease;
+    z-index: 2;
+}
+
+.transparent {
+    background-color: transparent;
+    transition: 1s ease;
+}
+
+#btn-menu {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+    position: relative;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btn-menu .line {
+    width: 75%;
+    height: 2px;
+    background-color: var(--primaria);
+    position: relative;
+    transition: .2s;
+}
+
+#btn-menu.active .line:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+
+#btn-menu.active .line:nth-child(2) {
+    width: 0;
+}
+
+#btn-menu.active .line:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+#header-title {
+    font-family: var(--fonte-cursiva);
+    font-size: 1.6rem;
+    color: var(--primaria);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--primaria);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--fundo-secoes);
+
+}
+
+nav a.active {
+    background-color: var(--primaria);
+    color: var(--fundo);
+}
+
+@media (max-width: 1300px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    header:has(#nav.active) {
+        background-color: var(--fundo-secoes);
+        z-index: 1;
+    }
+
+    nav {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: var(--header-size);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        background-color: transparent;
+        height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    nav a {
+        margin: 10px 0;
+        color: var(--primaria);
+    }
+
+    nav.active {
+        height: 200px;
+        background-color: var(--fundo-secoes);
+
+    }
+
+    #btn-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 750px) {
+    header {
+        background-color: var(--fundo);
+        z-index: 1;
+    }
+}
